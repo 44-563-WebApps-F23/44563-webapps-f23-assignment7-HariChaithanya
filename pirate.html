@@ -21,6 +21,12 @@
             justify-content: center;
             
         }
+     .game{
+        width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing:content-box;
+        }
     </style>
 </head>
 <body>
@@ -29,54 +35,116 @@
     <div>
         <p style="color: red; background-color: azure; text-align: center;">Click on the locations to search for treasure, beware the traps.</p>
     </div>
-    <div id="locations">
-        <p style="color: blue; background-color: azure; text-align: center;">Number of locations checked is zero</p>
+    <div id="locations" style="color: blue; background-color: azure; text-align: center;">
+        <p >Number of locations checked is zero</p>
     </div>
-    <div id="penalty">
-        <p style="color: palegreen; background-color: azure; text-align: center;">Penalty is zero</p>
+    <div id="penalty" style="color: palegreen; background-color: azure; text-align: center;">
+        <p >Penalty is zero</p>
     </div>
     <div>
-        <p style="color: violet; background-color: azure; text-align: center;">Click for help.</p>
+        <p style="color: violet; background-color: azure; text-align: center;" onclick="help()">Click for help.</p>
     </div>
-    <div id="help">
-        <p style="color: chocolate; background-color: azure; text-align: center;">Help report</p>
+    <div id="help" style="color: chocolate; background-color: azure; text-align: center;">
+        <p >Help report</p>
     </div>
-    
+    <div class="game">
     <div class="row">
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-    </div>
-    <div class="row">
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-    <div class="row">
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc0" onclick="check(0)" ></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc1" onclick="check(1)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc2" onclick="check(2)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc3" onclick="check(3)" ></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc4" onclick="check(4)"></div>
     </div>
     <div class="row">
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc5" onclick="check(5)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc6" onclick="check(6)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc7" onclick="check(7)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc8" onclick="check(8)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc9" onclick="check(9)"></div>
+    <div class="row">
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc10" onclick="check(10)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc11" onclick="check(11)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc12" onclick="check(12)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc13" onclick="check(13)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc14" onclick="check(14)"></div>
+    </div>
+    <div class="row">
+        <div class="location">
+            <img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc15" onclick="check(15)">
+            </div>
+        <div class="location">
+        <img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc16" onclick="check(16)">
+        </div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc17" onclick="check(17)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc18" onclick="check(18)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc19" onclick="check(19)"></div>
         </div>
     <div class="row">
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" ></div>
-       
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc20" onclick="check(20)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc21" onclick="check(21)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc22" onclick="check(22)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc23" onclick="check(23)"></div>
+        <div class="location"><img src="location.jpg" alt="Starting Location" width="100px" height="100px" id="loc24" onclick="check(24)"></div>      
         </div>
-    
-    
+      </div>
+    <script>
+        
+  const ids = ["loc0","loc1","loc2","loc3","loc4","loc5","loc6","loc7","loc8","loc9","loc10","loc11","loc12",
+"loc13","loc14","loc15","loc16","loc17","loc18","loc19","loc20","loc21","loc22","loc23","loc24"]
+    let checkCount=0
+    let penalty=0
+    let lastCheck=0
+    let treasureLocation=5
+    let trapLocation=18
+    let gameOver=false
+
+    function check(position) {
+        if(gameOver){
+
+        }
+        else{
+            image = document.getElementById(ids[position])
+            console.log(ids[position])
+
+        if(position==treasureLocation){
+            image.src="treasure.jpg"
+            gameOver=true
+            penalty=penalty-3
+        }
+        else if(position==trapLocation){
+            image.src = "trap.jpg"
+            gameOver=true
+            penalty=penalty+4
+        }
+        else{
+            image.src = "pirateflag.png" 
+        }
+        checkCount+=1
+        penalty+=1
+        document.getElementById("locations").innerHTML = "Locations checked : "+checkCount
+        document.getElementById("penalty").innerHTML = "Penalty is : "+penalty
+        lastCheck=penalty
+        } 
+    }
+
+    function help() {
+        lastCheckedRow=parseInt(lastCheck/5)
+        lastCheckedColumn=parseInt(lastCheck%5)
+        tresRow = parseInt(treasureLocation/5)
+        treasure_column = parseInt(treasureLocation%5)
+        if(((lastCheckedColumn-treasure_column))==1){
+            document.getElementById("help").innerHTML ="Can smell it"
+        }
+        else if(((lastCheckedRow-tresRow)+(lastCheckedColumn-treasure_column)+2)==2){
+            document.getElementById("help").innerHTML = "Close Matie"
+        }
+        else{
+            document.getElementById("help").innerHTML = "Step Faster"
+        }
+        penalty+=2
+        document.getElementById("penalty").innerHTML = "Updated the penalty: "+penalty
+    }
+  
+
+    </script>
 </html>

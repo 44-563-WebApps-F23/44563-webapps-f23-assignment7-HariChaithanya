@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Merger of Items</title>  
+    <style>
+    .flex-container {
+      display: flex;  flex-direction:row;
+      background-color: rgb(227, 223, 28);
+  }
+
+.flex-container > div {  /*div children of the flex container*/
+  background-color: #f953fe; 
+  margin: 10px;  padding: 20px;  font-size: 30px;
+}
+@media (max-width: 500px) { 
+	 .flex-container{
+		 flex-direction:column;
+		 background-color: rgb(172, 122, 97);
+	  }
+	}
+</style>
+
+</head>
+
+
+
+<body>
+    <header><h1>Harichaithanya Kotapati Builds a Merger</h1></header>
+    
+		<div class="flex-container" id="target">
+		  <div class="merger">row item 1</div>   
+		  <div class="merger">row item 2</div>  
+		  <div class="merger">row item 3</div>  
+		</div>
+   
+    <label for="inputElement">Give input of something :<br></label>
+    <input type="text" id="input" name="input" value="">
+
+    <button onclick="addEnd()" style="background-color: #f953fe;color: brown;">Add end</button>
+    <button onclick="addFront()" style="background-color: aliceblue; color: red;">Add front</button>
+    <button onclick="remove()" style="background-color: aqua; color: crimson;">Remove</button>
+	
+	
+</body>
+<script>
+	function remove() {
+        let mitems = document.getElementsByClassName("merger");
+        let mergerLength = mitems.length;
+        if (mergerLength  > 0) {
+            let midIdx = Math.floor(mergerLength / 2);
+            mitems[midIdx].remove();
+        }
+        }
+        function addFront() {
+        let getDiv = document.createElement("div");
+        let inputValue = document.getElementById('input').value;
+        getDiv.innerHTML = inputValue;
+        getDiv.className = "merger";
+
+        let container = document.getElementById('target');
+        container.insertBefore(getDiv, container.firstChild);
+        }
+
+        function addEnd() {
+        let getEnd = document.createElement("div");
+        let inputValue = document.getElementById('input').value;
+        getEnd.innerHTML = inputValue;
+        getEnd.className = "merger";
+
+        let result = document.getElementById('target');
+        result.appendChild(getEnd);
+        }
+</script>
+</html>	
