@@ -39,6 +39,7 @@
     <button onclick="addEnd()" style="background-color: #f953fe;color: brown;">Add end</button>
     <button onclick="addFront()" style="background-color: aliceblue; color: red;">Add front</button>
     <button onclick="remove()" style="background-color: aqua; color: crimson;">Remove</button>
+    <button onclick="swap()" style="background-color: rgb(147, 183, 230); color: rgb(3, 3, 61);">Swap</button>
 	
 	
 </body>
@@ -70,5 +71,22 @@
         let result = document.getElementById('target');
         result.appendChild(getEnd);
         }
+
+        function swap() {
+        let mergerItems = document.getElementsByClassName("merger");
+        let mergerLength = mergerItems.length;
+        ele1=Math.floor((Math.random() * mergerLength) + 0)
+        ele2=Math.floor((Math.random() * mergerLength) + 0)
+        if(ele1==ele2){
+            ele2=Math.floor((Math.random() * mergerLength) + 0)
+        }
+        
+        const div1 = mergerItems[ele1].innerHTML
+        const div2 = mergerItems[ele2].innerHTML
+        mergerItems[ele1].innerHTML=div2;
+        mergerItems[ele2].innerHTML=div1;
+    }
+
+
 </script>
 </html>	
